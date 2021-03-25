@@ -12,7 +12,7 @@ export const Container = styled.div`
 
 export const RecentActivity = styled.div`
     width: 100%;
-    min-height: 30rem;
+    min-height: 29rem;
     padding-left: 26rem;
     padding-right: 8rem;
     display: flex;
@@ -128,4 +128,111 @@ export const Channel = styled.div`
    width: calc(100% - 4rem);
    height: 100%;
    background: #0E0E10;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   border-radius: 0px 8px 0px 0px;
+   flex-direction: column;
+`
+
+export const ChannelHeader = styled.div`
+    width: 100%;
+    height: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+`
+export const Title = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 10px;
+    gap: 20px;
+
+    > img{
+        border-radius: 50%;
+        width: 65px;
+        border: 2px solid rgba(0, 0, 0, 0.0);
+        box-shadow: 0px 0px 0px 2.5px #53535F;
+    }
+
+    >div{
+        h1{
+            font-size: 24px;
+            color: white;
+        }
+        h2{
+            font-size: 14px;
+            color: white;
+            font-weight: 300;
+        }
+    }
+`
+export const Follow = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 10px;
+    gap: 5px;
+
+    >div{
+        width: 95px;
+        height: 30px;
+        border-radius: 5px;
+        background: #9147ff;
+        color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;
+        gap: 5px;
+        font-size: 14px;
+
+        &:hover{
+        background: #6d36bf;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    }   
+
+`
+export const More = styled.button`
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: none;
+    &:hover{
+        background: #232628;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+`
+
+export const ChannelTabs = styled.div`
+    width: 100%;
+    height: ;
+`
+export const About = styled.div`
+
+`
+export const Tabs = styled.div`
+
+`
+export const Schedule = styled.div`
+
+`
+export const Videos = styled.div`
+
+`
+export const Chat = styled.div`
+
+`
+export const Home = styled.div`
+
 `

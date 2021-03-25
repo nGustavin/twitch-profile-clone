@@ -1,9 +1,11 @@
 import { ReactNode } from 'react';
-import {FiBell} from 'react-icons/fi'
+import {FiBell, FiArrowUpRight} from 'react-icons/fi'
 import {BsPlayFill, BsVolumeMuteFill} from 'react-icons/bs'
-import {RiSettings5Fill, RiFullscreenFill} from 'react-icons/ri'
+import {RiSettings5Fill, RiFullscreenFill, RiHeartLine} from 'react-icons/ri'
 
-import { Container, RecentActivity, Info, Status, Notifications, Player, TopStatus, PlayerControls, Left, Right, Channel } from './styles';
+import {IoMdMore} from 'react-icons/io'
+
+import { Container, RecentActivity, Info, Status, Notifications, Player, TopStatus, PlayerControls, Left, Right, Channel, ChannelHeader, Title, Follow, More, ChannelTabs, About, Tabs, Schedule, Videos, Chat, Home} from './styles';
 
 interface ProfilePageProps {
   children?: ReactNode;
@@ -12,6 +14,7 @@ interface ProfilePageProps {
 function ProfilePage({ children }: ProfilePageProps) {
   return (
     <Container>
+
       <RecentActivity>
         <Info>
           <Status>OFFLINE</Status>
@@ -35,10 +38,48 @@ function ProfilePage({ children }: ProfilePageProps) {
           </PlayerControls>
         </Player>
       </RecentActivity>
+
       <Channel>
-        <h1>Canal</h1>
+        <ChannelHeader>
+          <Title>
+          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/ca73fcbf-9428-4612-80eb-cddb341f315e-profile_image-70x70.png" alt="profile image"/>
+            <div>
+              <h1>Gustavinho</h1>
+              <h2>7 Followers</h2>
+            </div>
+          </Title>
+          <Follow>
+            <div>
+              <RiHeartLine fill={'#FFF'} size={22}/>
+              Follow
+            </div>
+            <More>
+              <IoMdMore fill={'white'} size={24}/>
+            </More>
+            
+          </Follow>
+        </ChannelHeader>
+
+        <ChannelTabs>
+
+          <Tabs>
+            <Home/>
+            <About/>
+            <Schedule/>
+            <Videos/>
+            <FiArrowUpRight/>
+            <Chat/>
+          </Tabs>
+
+          <div>
+              <FiArrowUpRight fill={'#FFF'} size={22}/>
+              Customize Channel
+          </div>
+
+        </ChannelTabs>
       </Channel>
-      {children}
+
+    
     </Container>
   );
 };
