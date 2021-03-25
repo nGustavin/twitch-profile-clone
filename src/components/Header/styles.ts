@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     background: #18181B;
+    z-index: 10;
     width: 100vw;
     height: 50px;
     position: absolute;
@@ -10,6 +11,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0px 0px 10px 2px black;
 `;
 export const LeftButtons = styled.div`
     display: flex;
@@ -75,9 +77,32 @@ export const RightButtons = styled.div`
         height: 28px;
         border-radius: 3px;
         background: none;
+        z-index: 2;
         &:hover{
             background: #464649;
             cursor: pointer;
+        }
+
+        >div {
+            position: absolute;
+            top: 6px;
+            right: 13.7%;
+            margin: 0;
+            width: 16px;
+            height: 16px;
+            z-index: 10;
+            border-radius: 8px;
+            background: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 0px 3px #18181B;
+            
+            > h1{
+                color: white;
+                font-size: 11px;
+                font-weight: 900;
+            }
         }
     }
     
@@ -134,7 +159,7 @@ export const Search = styled.div`
         &:focus{
             box-shadow: inset 0px 0px 0px 2px #a26bf4;
             background: #18181B;
-            transition: 0.1s;
+            transition: 0.2s;
         }
 
         &:hover{
@@ -144,7 +169,7 @@ export const Search = styled.div`
             &:focus{
                 box-shadow: inset 0px 0px 0px 2px #a26bf4;
                 background: #18181B;
-                transition: 0.1s;
+                transition: 0.2s;
             }
         }
     }

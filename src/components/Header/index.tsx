@@ -31,6 +31,9 @@ function Header({ children }: HeaderProps) {
       </Search>
       <RightButtons>
         <button>
+          <div>
+            <h1>4</h1>
+          </div>
           <CgCrown size={22} color={'#efeff1'} />
         </button>
         <button >
