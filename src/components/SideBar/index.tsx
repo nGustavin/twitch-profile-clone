@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import {BiArrowFromLeft} from 'react-icons/bi'
-
+import { HiOutlineVideoCamera } from 'react-icons/hi'
 
 import { Container, Channel, ChannelImage, ChannelName, Info, Game, Watchers, FollowingChannels} from './styles';
 
@@ -63,6 +63,20 @@ function SideBar() {
         <ChannelImage/>
         <Info>
           <ChannelName>NomeMtoGrande</ChannelName>
+          <Game>Just Talking</Game>
+        </Info>
+        <Watchers><div></div> 16,2k</Watchers>
+      </Channel>
+
+      <FollowingChannels>
+        <h1>Sugested Channels</h1>
+        <HiOutlineVideoCamera fill={'#FFF'} size={20}/>
+      </FollowingChannels>
+
+      <Channel>
+        <ChannelImage/>
+        <Info>
+          <ChannelName>Gaules</ChannelName>
           <Game>Just Talking</Game>
         </Info>
         <Watchers><div></div> 16,2k</Watchers>

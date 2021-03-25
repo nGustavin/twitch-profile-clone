@@ -8,4 +8,6 @@ export const Layout = styled.div`
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    padding: 50px 0px 0px 50px;
 `
+
